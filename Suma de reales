@@ -1,0 +1,25 @@
+public class Suma_reales {
+
+    public static void main(String[] args) {
+        
+        int bandera = 1;
+        double num, suma = 0.0;
+        char c;
+        Scanner escn = new Scanner(System.in);
+        
+        while (bandera == 1) {
+            System.out.print("introduzca un numero: ");
+            num = escn.nextDouble();
+            suma += num;
+            
+            System.out.print("usted desea continuar ingresando datos? (S/N) ");
+            c = escn.next().charAt(0);
+            
+            if (c == 'N' || c == 'n') {
+                bandera = 0;
+            }
+        }
+        
+        System.out.println("La suma es: " + suma);
+    }
+}
